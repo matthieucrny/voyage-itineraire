@@ -1,0 +1,4 @@
+# Config locale de l'outillage
+.claude/
+# Fichiers système
+.DS_Store
