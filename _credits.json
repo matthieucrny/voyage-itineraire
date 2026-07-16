@@ -1,0 +1,98 @@
+{
+  "nancy": {
+    "artist": "Berthold Werner",
+    "license": "CC BY-SA 3.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+    "descurl": "https://commons.wikimedia.org/wiki/File:Nancy_Place_Stanislas_BW_2015-07-18_14-00-16.jpg",
+    "title": "Place Stanislas",
+    "file": "Nancy_Place_Stanislas_BW_2015-07-18_14-00-16.jpg"
+  },
+  "roche-de-solutre": {
+    "artist": "LSL36",
+    "license": "CC0",
+    "license_url": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+    "descurl": "https://commons.wikimedia.org/wiki/File:Roche_de_Solutr%C3%A9_05.24.jpg",
+    "title": "Roche de Solutré",
+    "file": "Roche_de_Solutré_05.24.jpg"
+  },
+  "puy-de-dome": {
+    "artist": "Carsten Steger",
+    "license": "CC BY-SA 4.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+    "descurl": "https://commons.wikimedia.org/wiki/File:Aerial_image_of_Puy_de_D%C3%B4me_(view_from_the_west).jpg",
+    "title": "Puy de Dôme",
+    "file": "Aerial_image_of_Puy_de_Dôme_(view_from_the_west).jpg"
+  },
+  "puy-de-sancy": {
+    "artist": "Clément Beckert",
+    "license": "CC BY-SA 3.0",
+    "license_url": "http://creativecommons.org/licenses/by-sa/3.0/",
+    "descurl": "https://commons.wikimedia.org/wiki/File:Vue_du_puy_de_Sancy.JPG",
+    "title": "Puy de Sancy",
+    "file": "Vue_du_puy_de_Sancy.JPG"
+  },
+  "lac-pavin": {
+    "artist": "F. THURION",
+    "license": "CC BY-SA 3.0",
+    "license_url": "http://creativecommons.org/licenses/by-sa/3.0/",
+    "descurl": "https://commons.wikimedia.org/wiki/File:Lac_Pavin_Vue_g%C3%A9n%C3%A9.JPG",
+    "title": "Lac Pavin",
+    "file": "Lac_Pavin_Vue_géné.JPG"
+  },
+  "chateau-de-murol": {
+    "artist": "Torsade de Pointes",
+    "license": "CC0",
+    "license_url": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+    "descurl": "https://commons.wikimedia.org/wiki/File:Murol_Ch%C3%A2teau7.JPG",
+    "title": "Château de Murol",
+    "file": "Murol_Château7.JPG"
+  },
+  "plateau-aubrac": {
+    "artist": "Pline",
+    "license": "CC BY-SA 3.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+    "descurl": "https://commons.wikimedia.org/wiki/File:Plateau-de-l%27Aubrac-pres-de-Rieutort-DSC_0751.jpg",
+    "title": "Commons:Plateau-de-l'Aubrac-pres-de-Rieutort-DSC 0751.jpg",
+    "file": "Plateau-de-l'Aubrac-pres-de-Rieutort-DSC 0751.jpg"
+  },
+  "gorges-du-tarn": {
+    "artist": "Benh LIEU SONG",
+    "license": "CC BY-SA 3.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+    "descurl": "https://commons.wikimedia.org/wiki/File:Saint_Chely_Tarn.jpg",
+    "title": "Gorges du Tarn",
+    "file": "Saint_Chely_Tarn.jpg"
+  },
+  "viaduc-de-millau": {
+    "artist": "Tobi 87",
+    "license": "CC BY-SA 3.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+    "descurl": "https://commons.wikimedia.org/wiki/File:Panorama_de_la_vall%C3%A9e_de_Millau.jpg",
+    "title": "Commons:Panorama de la vallée de Millau.jpg",
+    "file": "Panorama de la vallée de Millau.jpg"
+  },
+  "rocher-aiguilhe": {
+    "artist": "Daniel Giffard",
+    "license": "CC BY-SA 3.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+    "descurl": "https://commons.wikimedia.org/wiki/File:Rocher_St_Michel_%C3%A0_Aiguilhe.JPG",
+    "title": "Commons:Rocher St Michel à Aiguilhe.JPG",
+    "file": "Rocher St Michel à Aiguilhe.JPG"
+  },
+  "puy-mary": {
+    "artist": "Jmp48",
+    "license": "CC BY-SA 3.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+    "descurl": "https://commons.wikimedia.org/wiki/File:Puy_Mary_face_Est.jpg",
+    "title": "Commons:Puy Mary face Est.jpg",
+    "file": "Puy Mary face Est.jpg"
+  },
+  "puy-de-pariou": {
+    "artist": "William Crochot (Medium69)",
+    "license": "CC BY-SA 4.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+    "descurl": "https://commons.wikimedia.org/wiki/File:Puy_Pariou_-_137.jpg",
+    "title": "Commons:Puy Pariou - 137.jpg",
+    "file": "Puy Pariou - 137.jpg"
+  }
+}
