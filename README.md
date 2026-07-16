@@ -6,6 +6,8 @@ de 6 jours entre **Nancy et le Massif central** (8 → 13 août 2026, en boucle 
 Carte topographique, tracé de la boucle, 10 étapes numérotées et détail jour par jour
 (horaires indicatifs, altitudes, conseils, lieux de nuitée).
 
+**🔗 Démo en ligne : https://matthieucrny.github.io/voyage-itineraire/**
+
 ![Statut](https://img.shields.io/badge/statut-V1-2f6d4f) ![Sans build](https://img.shields.io/badge/build-aucun-b5541f) ![Sans clé API](https://img.shields.io/badge/API-aucune%20cl%C3%A9-2f6d4f)
 
 ---
