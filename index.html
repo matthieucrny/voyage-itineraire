@@ -270,6 +270,18 @@
   .stage:first-child { border-top: 0; }
   .stage:focus-visible { outline: 2px solid var(--accent); outline-offset: 1px; }
 
+  .stage-img {
+    grid-column: 1 / -1;
+    width: 100%; height: 150px;
+    object-fit: cover;
+    border-radius: 12px;
+    margin: 2px 0 5px;
+    background: var(--line-soft);
+    box-shadow: var(--shadow-sm);
+    transition: transform .3s var(--ease);
+  }
+  .stage:hover .stage-img { transform: scale(1.012); }
+
   .stage-pin {
     position: relative; z-index: 1;
     grid-row: span 3;
@@ -365,8 +377,15 @@
   .leaflet-marker-icon:hover .pin { transform: translateY(-4px) scale(1.12); }
 
   /* Popups */
-  .leaflet-popup-content-wrapper { border-radius: 14px; box-shadow: var(--shadow-lg); }
-  .leaflet-popup-content { margin: 13px 15px; line-height: 1.4; }
+  .leaflet-popup-content-wrapper { border-radius: 14px; box-shadow: var(--shadow-lg); overflow: hidden; }
+  .leaflet-popup-content { margin: 0; line-height: 1.4; }
+  .leaflet-popup-content > *:not(.pop-img) { margin-left: 15px; margin-right: 15px; }
+  .leaflet-popup-content > .pop-day { margin-top: 11px; }
+  .leaflet-popup-content > .pop-note { margin-bottom: 13px; }
+  .pop-img {
+    display: block; width: 100%; height: 132px;
+    object-fit: cover; margin: 0 0 4px; background: var(--line-soft);
+  }
   .pop-day { color: var(--accent); font-size: .73rem; font-weight: 700; text-transform: uppercase; letter-spacing: .06em; }
   .pop-title { font-family: var(--font-title); font-weight: 700; font-size: 1.05rem; margin: 2px 0 0; color: var(--ink); }
   .pop-opt { color: var(--accent-2); font-weight: 700; font-size: .78rem; margin-top: 3px; }
@@ -448,6 +467,8 @@
     <p class="panel-foot">
       Fonds de carte © <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener">OpenStreetMap</a>,
       rendu <a href="https://opentopomap.org" target="_blank" rel="noopener">OpenTopoMap</a> (CC-BY-SA).
+      <span class="sep">·</span>Photos : Wikimedia Commons (licences libres, voir
+      <a href="CREDITS.md" target="_blank" rel="noopener">CREDITS</a>).
       <span class="sep">·</span>Tracé à vol d'oiseau, horaires et distances indicatifs.
     </p>
   </aside>
@@ -534,6 +555,17 @@ const DAYS = [
   },
 ];
 
+/* Photos des sites (Wikimedia Commons, licences libres — voir CREDITS.md) */
+const IMG = {
+  "Départ de Nancy": "nancy", "Retour à Nancy": "nancy",
+  "Roche de Solutré": "roche-de-solutre", "Puy de Dôme": "puy-de-dome",
+  "Puy de Pariou": "puy-de-pariou", "Lac Pavin": "lac-pavin", "Puy de Sancy": "puy-de-sancy",
+  "Château de Murol": "chateau-de-murol", "Puy Mary": "puy-mary",
+  "Plateau de l'Aubrac": "plateau-aubrac", "Gorges du Tarn": "gorges-du-tarn",
+  "Viaduc de Millau": "viaduc-de-millau", "Rocher Saint-Michel d'Aiguilhe": "rocher-aiguilhe",
+};
+const imgSrc = (s) => (IMG[s.name] ? "images/" + IMG[s.name] + ".jpg" : null);
+
 /* ============ Carte ============ */
 const BOUNDS_PAD = [34, 34];
 const markers = [];    // { marker, dayId }
@@ -581,12 +613,16 @@ if (!HAS_LEAFLET) {
 
       const marker = L.marker(s.coords, { icon, title: s.name, alt: s.name, riseOnHover: true });
       const optLine = s.opt ? '<div class="pop-opt">★ Étape optionnelle</div>' : "";
+      const src = imgSrc(s);
+      const popImg = src ? `<img class="pop-img" src="${src}" alt="${s.name}" loading="lazy" decoding="async" onerror="this.remove()">` : "";
       marker.bindPopup(
-        `<div class="pop-day">${day.label} · ${day.date}</div>
+        `${popImg}
+         <div class="pop-day">${day.label} · ${day.date}</div>
          <div class="pop-title">${s.name}</div>
          ${optLine}
          <div class="pop-meta"><span class="pill">🕓 ${s.time}</span><span class="pill">⛰️ ${s.alt} m</span></div>
-         <div class="pop-note">${s.note}</div>`
+         <div class="pop-note">${s.note}</div>`,
+        { minWidth: 240, maxWidth: 280 }
       );
       marker.addTo(map);
       const rec = { marker, dayId: day.id };
@@ -657,9 +693,12 @@ DAYS.forEach((day) => {
     const pinCls = "stage-pin" + (isNancy ? " nancy" : "") + (s.opt ? " opt" : "");
     const pin = isNancy ? "★" : (s.opt ? "★" : s.n);
     const tag = s.opt ? '<span class="tag">Optionnel</span>' : "";
+    const src = imgSrc(s);
+    const img = src ? `<img class="stage-img" src="${src}" alt="${s.name}" loading="lazy" decoding="async" onerror="this.remove()">` : "";
     return `
       <li class="stage" data-day="${day.id}" data-idx="${i}" role="button" tabindex="0"
           aria-label="Voir ${s.name} sur la carte">
+        ${img}
         <span class="${pinCls}">${pin}</span>
         <span class="stage-name">${s.name}${tag}</span>
         <span class="stage-meta"><span class="pill">🕓 ${s.time}</span><span class="pill">⛰️ ${s.alt} m</span></span>

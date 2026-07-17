@@ -2,3 +2,6 @@
 .claude/
 # Fichiers système
 .DS_Store
+
+# Métadonnées de génération des images (CREDITS.md fait foi)
+images/_credits.json
